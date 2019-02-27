@@ -1,4 +1,13 @@
-**This repo has been archived as a complete redesign is on its way - including physical components**
+**slightly modified version of this:https://github.com/nidayand/motor-on-roller-blind-ws
+
+all credits goes to the original Author.
+
+I have to modify the Code a bit because everytime I rebooted the NodeMCU board lost it's state.
+It turned out I have some problem with the SPIFSS store/loadConfig  part, after the reboot the first JSON value (currentPos) allways corrupted. Maybe this is because of using different version if IDE/mac to compile the code or just some crappy NodeMCU board i have, i spent couple of hours to getting this done, but now works very well.
+
+So if you have problems with the position savings use this code variant.
+All other function is the same as the origonal.
+
 
 # motor-on-roller-blind-ws
 WebSocket based version of [motor-on-roller-blind](https://github.com/nidayand/motor-on-roller-blind). I.e. there is no need of an MQTT server but MQTT is supported as well - you can control it with WebSockets and/or with MQTT messages.
